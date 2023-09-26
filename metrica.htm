@@ -237,6 +237,15 @@ mx2=0
 function plota(series, ph)
 {   
 
+
+if (phh.paused &&  (dt.length >70))
+{  
+    //alert("STOP")
+    console.log('calling klearInt()')
+    klearInt()
+}
+
+
 //console.log("XART:",ph);
 	konector=true
 
@@ -383,7 +392,8 @@ colors = ['orange', '#808080','#101010', 'black', '#050505', '#E80C7A'];
     });
 }
 
-	ph=document.getElementById("audio2")
+    ph=document.getElementById("audio2")
+	phh=document.getElementById("audio2")
 	pingh=document.getElementById("ping")
 
 </script>
