@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+<script>
+var ph=0;
+function aplay(url)
+{	console.log(url)	
+	ph=document.getElementById("player");
+	ph.src=url
+	//ph.source=url
+//	ph.play()
+	setTimeout(function(){ph.play()}, 3000)
+
+
+}
+</script>
+</head>
+<body style='font-family: roboto;'>
+
+<table border=1 cellspacing="0" style='width:100%'>
+	<tr><td colspan=2>
+			<audio id="player" preload="auto" tabindex="0" controls="volume;face;equalizer;" type="audio/mpeg" style="width:100%;">
+        <source type="audio/mp3" src="">
+        Sorry, your browser does not support HTML5 audio.
+    </audio>
+<br>
+<input type=text id=tempo value=0> <input type=text id=volume value=0> 
+
+    
+	<tr><td style='width:50%'>
+
+    <button onclick="aplay(this.value)" value='mp3/Colombina.mp3'>Colombina</button>
+    <button onclick="aplay(this.value)" value='mp3/Rodolfo Biagi - El Clavelito (Hugo Duval).mp3'>El clavelito</button>
+    <button onclick="aplay(this.value)" value='mp3/Orquesta Típica Victor - Coqueta.mp3'>Coqueta</button>
+    <button onclick="aplay(this.value)" value="mp3/Engañame nomás - Canaro-Maida '35.mp3">Engañame nomás</button>
+    <button onclick="aplay(this.value)" value='mp3/Orquesta Tipica Juan Maglio - Alma en pena (José Gallarza).mp3'>Alma en pena</button>
+    <button onclick="aplay(this.value)" value='mp3/OTV - Abrojalera.mp3'>Abrojalera</button>
+    <button onclick="aplay(this.value)" value='mp3/TIpica Victor - Que Ranada, Instrumental (1928)(no noise).mp3'>Que ranada</button>
+    <button onclick="aplay(this.value)" value='mp3/Edgardo Donato - Carnaval De Mi Barrio.mp3'>Carnaval de mi Barrio</button>
+    <button onclick="aplay(this.value)" value="mp3/Juan D'Arienzo - 1939 - No me lo digas.mp3">No me lo digas</button>
+    <button onclick="aplay(this.value)" value="mp3/Mirame en la cara (Hector Mauré).mp3">Mirame en la cara</button>
+    <button onclick="aplay(this.value)" value="mp3/Carlos di Sarli - Nueve puntos.mp3">Nueve puntos</button>
+    <button onclick="aplay(this.value)" value="mp3/Sexteto Carlos Di Sarli - TBC.mp3">TBC</button>
+    <button onclick="aplay(this.value)" value="mp3/Anibal Troilo - Garras (Alberto Marino).mp3">Garras</button>
+    
+
+
+
+	<td valign=top> Tempos fortes * Identificação das frases
+			<input type="button" id='bmo' value="mem test off" onclick='this.value=this.value=="mem test off"?"mem test on":"mem test off"'></button>
+</table>
+
+<script>
+function volman()
+{	if (ph==0) return;
+	document.getElementById('tempo').value=ph.currentTime
+
+	if (
+			((ph.currentTime>15) && (ph.currentTime<18))
+		 || ((ph.currentTime>28) && (ph.currentTime<33))
+		 || ((ph.currentTime>43) && (ph.currentTime<51))
+		 || ((ph.currentTime>61) && (ph.currentTime<64))
+		 || ((ph.currentTime>74) && (ph.currentTime<79))
+		 || ((ph.currentTime>89) && (ph.currentTime<97))
+		)
+	{	ph.volume=.0 + .1*(document.getElementById('bmo').value=='mem test off')
+	} 
+	else
+	{
+		ph.volume=1
+	}
+
+}
+
+setInterval(volman, 100)
+</script>
+</body>
+</head>
