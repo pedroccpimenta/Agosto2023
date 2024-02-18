@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Audição Comparada</title>
+
+<style type="text/css">
+
+
+.frase {
+      width: 210px;
+      height: 30px;
+      text-align: center;
+      vertical-align: middle;
+      vertical-align: bottom;
+      display: inline-block;
+      style:'display:inline-block;';
+      font-size: 11px;
+      padding:3px;
+      align-content: center;
+      align-self: center;
+      
+    }
+
+.tcont {
+      	align-self: center;
+      	align-content: center;
+    }
+
+</style>
+
+</head>
+
+
+<body style='font-family: Lato;' onload="oaset()">
+
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode
+-->
+
+
+El Clavelito
+	<table style='width:100%;max-width: 800px;' border=1>
+		<tr>
+			<td style='width:100%;height:10px;'>
+				<audio id=audio1 style='width:100%' type="audio/mpeg"  controls controls="true" >
+					<source src='../Rodolfo Biagi/rodolfo biagi - 166 - en el lago azul - hugo duval -idem 1959.mp3'>
+					<track
+          src="subt-que ranada.vtt"
+          label="English subtitle"
+          kind="captions"
+          srclang="en-us"
+          default
+        />
+				</audio>
+				<tr><td>
+<!--
+				<audio id="audio2" preload="auto" tabindex="0" controls="true" type="audio/mpeg" style="width:100%;height: 30px;border-radius: 8px;">
+        		<source type="audio/mp3" src="../Orquesta Tipica Victor/TIpica Victor - Que Ranada, Instrumental (1928)(no noise).mp3">
+        Sorry, your browser does not support HTML5 audio.
+    </audio> -->
+<center>
+	<table border=0 width='100%' class=tcont cellspacing="5">
+	<tr>
+	<td align=center><div class=frase style='background: palegreen;'         onclick='frase(0)'> ---</div>
+    <td align=center><div class=frase style='background: lime;'              onclick='frase(1)'>F 2 (DesenvI.)</div>
+    <td align=center><div class=frase style='background: palegreen;'         onclick='frase(2)'>F 3 (Intro(R))</div>
+    <td align=center><div class=frase style='background: Mediumspringgreen;' onclick='frase(3)'>F 4 ( F2 Res & Prep)</div>
+
+    <tr>
+    <td align=center><div class=frase style='background: khaki;'             onclick='frase(4)'>F 5 (Início Narrativa)<br>
+    (contrabaixo e bandoneón (+piano))</div>
+    <td align=center>
+    	<div class=frase style='background: orange;'      value='' onclick='frase(5)'>F 6 (DesenvolN.)</div> 
+    <td align=center>
+    	<div class=frase style='background: khaki;'    value='F 7 (IN (R)) ' onclick='frase(6)'>F 7 (F5 (5))</div>
+    <td align=center>	
+    	<div class=frase style='background: orange' value='frase 8' onclick='frase(7)'>F 8 (F6 Res & Prep)<br>
+    	
+
+	<tr><td align=center>
+    	<div class=frase style='background:palegreen;' onclick='frase(8)'>Será tal vez porque soy pobre, muy pobre,<br>que eres así con mi cariño sincero,</div>
+<td align=center>
+    	<div class=frase style='background:lime;' onclick='frase(9)'>sin comprender que mi riqueza del alma<br>también es oro que yo te ofrezco.</div>
+<td align=center>
+    	<div class=frase style='background:palegreen;' onclick='frase(10)'>Talvez tu amor sólo persigue grandezas<br>para adornar tanta belleza sin alma.</div>
+<td align=center>
+    	<div class=frase style='background:palegreen;' onclick='frase(11)'>Todo es igual, como aquel cuento que dice,
+de los amores de una rosa y un clavel.</div><br>
+<tr><td align=center>
+    	<div class=frase style='background: khaki;'  value='frase 13' onclick='frase(12)'>Un clavelito triste vivía
+por una rosa se consumía,</div>
+    
+    <td align=center>
+    	<div class=frase style='background: orange;'  value='frase 14' onclick='frase(13)'>pero la rosa, coqueta y mala<br>a una estrellita chiquitita solo amava
+    <td align=center>
+    	<div class=frase style='background: khaki;'  value='frase 15' onclick='frase(14)'>Pasa en la vida como en las flores<br>todos tenemos penas de amores</div>
+    <td align=center>
+    	<div class=frase style='background: orange;'  value='frase 16' onclick='frase(15)'>La misma pena del clavelito<br>por tu desprecio siento aqui en el corazón</div>
+    <tr><td align=center>
+    	<div class=frase style='background: khaki;'  value='frase 17' onclick='frase(16)'>(bandoneón e piano)</div>
+    <td align=center>
+    	<div class=frase style='background: orange;'  value='frase 18' onclick='frase(17)'>--</div>
+    <td align=center> 	<div class=frase  style='background: khaki;display:inline-block;' value='frase 19' onclick='frase(18)'>Pasa en la vida, como en las flores<br>todos tenemos penas de amores</div>
+	<td align=center>
+  		<div class=frase  style='background: orange;' onclick='frase(19)'>la misma pena del Clavelito<br>por tu desprecio siento aqui nel corazón!</div>
+</table>
+
+    <tr><td id=status style="width:100%;max-width:1100px;overflow: scroll;">
+	</table>
+
+
+	</body>
+
+<script>
+	ppf=JSON.parse('["2023-02-11T10:52:08.639Z","2023-02-11T10:52:09.647Z","2023-02-11T10:52:10.580Z","2023-02-11T10:52:11.532Z","2023-02-11T10:52:12.466Z","2023-02-11T10:52:13.449Z","2023-02-11T10:52:14.412Z","2023-02-11T10:52:15.410Z","2023-02-11T10:52:16.373Z","2023-02-11T10:52:17.356Z","2023-02-11T10:52:18.330Z","2023-02-11T10:52:19.329Z","2023-02-11T10:52:20.281Z","2023-02-11T10:52:21.286Z","2023-02-11T10:52:22.389Z","2023-02-11T10:52:23.375Z","2023-02-11T10:52:24.388Z","2023-02-11T10:52:25.443Z","2023-02-11T10:52:26.400Z","2023-02-11T10:52:27.415Z","2023-02-11T10:52:28.406Z","2023-02-11T10:52:29.404Z","2023-02-11T10:52:30.299Z","2023-02-11T10:52:31.266Z","2023-02-11T10:52:32.233Z","2023-02-11T10:52:33.226Z","2023-02-11T10:52:34.210Z","2023-02-11T10:52:35.150Z","2023-02-11T10:52:36.133Z","2023-02-11T10:52:37.098Z","2023-02-11T10:52:38.084Z","2023-02-11T10:52:39.042Z","2023-02-11T10:52:40.121Z","2023-02-11T10:52:41.121Z","2023-02-11T10:52:42.098Z","2023-02-11T10:52:43.120Z","2023-02-11T10:52:44.094Z","2023-02-11T10:52:45.053Z","2023-02-11T10:52:46.003Z","2023-02-11T10:52:47.067Z","2023-02-11T10:52:48.065Z","2023-02-11T10:52:49.003Z","2023-02-11T10:52:49.918Z","2023-02-11T10:52:50.901Z","2023-02-11T10:52:51.971Z","2023-02-11T10:52:53.002Z","2023-02-11T10:52:53.998Z","2023-02-11T10:52:55.016Z","2023-02-11T10:52:56.030Z","2023-02-11T10:52:56.981Z","2023-02-11T10:52:57.980Z","2023-02-11T10:52:58.954Z","2023-02-11T10:52:59.929Z","2023-02-11T10:53:00.864Z","2023-02-11T10:53:01.815Z","2023-02-11T10:53:02.783Z","2023-02-11T10:53:03.775Z","2023-02-11T10:53:04.747Z","2023-02-11T10:53:05.705Z","2023-02-11T10:53:06.703Z","2023-02-11T10:53:07.709Z","2023-02-11T10:53:08.692Z","2023-02-11T10:53:09.722Z","2023-02-11T10:53:10.728Z","2023-02-11T10:53:11.711Z","2023-02-11T10:53:12.814Z","2023-02-11T10:53:13.828Z","2023-02-11T10:53:14.723Z","2023-02-11T10:53:15.649Z","2023-02-11T10:53:16.704Z","2023-02-11T10:53:17.616Z","2023-02-11T10:53:18.597Z","2023-02-11T10:53:19.588Z","2023-02-11T10:53:20.586Z","2023-02-11T10:53:21.572Z","2023-02-11T10:53:22.582Z","2023-02-11T10:53:23.542Z","2023-02-11T10:53:24.551Z","2023-02-11T10:53:25.531Z","2023-02-11T10:53:26.521Z","2023-02-11T10:53:27.472Z","2023-02-11T10:53:28.455Z","2023-02-11T10:53:29.397Z","2023-02-11T10:53:30.404Z","2023-02-11T10:53:31.418Z","2023-02-11T10:53:32.441Z","2023-02-11T10:53:33.392Z","2023-02-11T10:53:34.382Z","2023-02-11T10:53:35.381Z","2023-02-11T10:53:36.372Z","2023-02-11T10:53:37.331Z","2023-02-11T10:53:38.289Z","2023-02-11T10:53:39.432Z","2023-02-11T10:53:40.446Z","2023-02-11T10:53:41.487Z","2023-02-11T10:53:42.453Z","2023-02-11T10:53:43.403Z","2023-02-11T10:53:44.393Z","2023-02-11T10:53:45.368Z","2023-02-11T10:53:46.395Z","2023-02-11T10:53:47.326Z","2023-02-11T10:53:48.309Z","2023-02-11T10:53:49.344Z","2023-02-11T10:53:50.379Z","2023-02-11T10:53:51.385Z","2023-02-11T10:53:52.415Z","2023-02-11T10:53:53.391Z","2023-02-11T10:53:54.381Z","2023-02-11T10:53:55.363Z","2023-02-11T10:53:56.322Z","2023-02-11T10:53:57.392Z","2023-02-11T10:53:58.432Z","2023-02-11T10:53:59.493Z","2023-02-11T10:54:00.492Z","2023-02-11T10:54:01.491Z","2023-02-11T10:54:02.514Z","2023-02-11T10:54:03.496Z","2023-02-11T10:54:04.479Z","2023-02-11T10:54:05.493Z","2023-02-11T10:54:06.516Z","2023-02-11T10:54:07.523Z","2023-02-11T10:54:08.464Z","2023-02-11T10:54:09.500Z","2023-02-11T10:54:10.471Z","2023-02-11T10:54:11.485Z","2023-02-11T10:54:12.443Z","2023-02-11T10:54:13.434Z","2023-02-11T10:54:14.400Z","2023-02-11T10:54:15.431Z","2023-02-11T10:54:16.438Z","2023-02-11T10:54:17.452Z","2023-02-11T10:54:18.467Z","2023-02-11T10:54:19.459Z","2023-02-11T10:54:20.472Z","2023-02-11T10:54:21.489Z","2023-02-11T10:54:22.436Z","2023-02-11T10:54:23.436Z","2023-02-11T10:54:24.433Z","2023-02-11T10:54:25.368Z","2023-02-11T10:54:26.347Z","2023-02-11T10:54:27.261Z","2023-02-11T10:54:28.188Z","2023-02-11T10:54:29.130Z","2023-02-11T10:54:30.185Z","2023-02-11T10:54:31.185Z"]');
+
+
+	pf=[]
+	cps=[]
+	pf.push(.5)
+	for (h in ppf)
+	{	j=new Date(ppf[h])
+		if (h==0)
+		{ts=j.getTime()}
+		else
+		{
+			pf.push(pf[0]+(j-ts)/1000)
+		}
+	
+		if (h%8==0)
+			cps.push(pf[h])
+	}
+
+
+	//cps=[2.169, 9.559, 17.121]
+
+	m1=0;
+	function oaset()
+	{	m1=document.getElementById("audio1")
+		document.getElementById("status").style.width=window.innerWidth+"px"		
+		console.log("OASET")
+		document.getElementById("status").innerHTML=JSON.stringify(pf)
+		document.getElementById("status").innerHTML+="<hr>"
+		document.getElementById("status").innerHTML+=JSON.stringify(cps)
+	}
+
+	  m1=document.getElementById("audio1")
+	  var ab=0
+	function frase(x)
+	{ clearInterval(ab)
+	  m1.pause()	
+	  m1.currentTime = cps[x]-.01;
+	  m1.play()
+	  console.log("playing at " ,  cps[x]-.01)
+	  ab=setTimeout(
+		  	function()
+			  	{ m1.pause();
+				  console.log("stoping at " +  cps[x+1]+.05)
+				}, 
+			(cps[x+1]-cps[x])*1000+100
+		)
+
+	}
+</script>
+</html>
