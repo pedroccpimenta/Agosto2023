@@ -3,8 +3,25 @@
 <head>
 <script>
 var ph=0;
+letra=['El Clavelito','La vida me engañó','Engañame nomás']
+
 function aplay(url)
-{	console.log(url)	
+{	
+	for (le in letra)
+	{	
+		document.getElementById(letra[le]).style.display='none'
+
+	}
+
+	for (le in letra)
+	{	
+		if(url.indexOf(letra[le])>0)
+				document.getElementById(letra[le]).style.display=''
+
+	}
+
+
+	console.log(url)	
 	ph=document.getElementById("player");
 	ph.src=url
 	//ph.source=url
@@ -29,7 +46,7 @@ function aplay(url)
     
 	<tr><td style='width:50%'>
 
-    Clique num botão abaixo para ouvir o tema indicado:<bR><Br>
+    Clique num botão abaixo para ouvir o tema indicado:<bR>
 
     <button onclick="aplay(this.value)" value='mp3/Colombina.mp3'>Colombina</button>
     <button onclick="aplay(this.value)" value='mp3/Rodolfo Biagi - El Clavelito (Hugo Duval).mp3'>El clavelito</button>
@@ -47,11 +64,44 @@ function aplay(url)
     
 
 
-    <button onclick="aplay(this.value)" value="mp3/Carlos di Sarli - La vida me engaño.mp3">La vida me engaño (di Sarli)</button>
-    <button onclick="aplay(this.value)" value="mp3/Alfredo De Angelis Y Su Orquesta Tipica - La Vida Me Engano (Julio Martel).mp3">La vida me engaño  (di Angelis)</button>
-    
+    <button onclick="aplay(this.value)" value="mp3/Carlos di Sarli - La vida me engañó.mp3">La vida me engaño (di Sarli)</button>
+    <button onclick="aplay(this.value)" value="mp3/Alfredo De Angelis Y Su Orquesta Tipica - La vida me engañó (Julio Martel).mp3">La vida me engaño  (di Angelis)</button><center>
+    <hr>
+<div id='El Clavelito' style='display:none;'>
+Será talvez porque soy pobre, muy pobre,<br>
+que eres así con mi cariño sincero,<br>
+sin comprender que mi riqueza del alma<br>
+también es oro que yo te ofrezco.<br>
+Talvez tu amor sólo persigue grandezas<br>
+para adornar tanta belleza sin alma.<br>
+Todo es igual, como aquel cuento que dice,<br>
+de los amores de una rosa y un clavel:<br>
+<br>
+Un clavelito triste vivía<br>
+por una rosa se consumía,<br>
+pero la rosa coqueta y mala<br>
+a una estrellita chiquitita solo amaba.<br>
+Pasa en la vida, como en las flores,<br>
+todos tenemos penas de amores,<br>
+la misma pena del clavelito<br>
+por tu desprecio siento aquí en el corazón.<br>
 
+</div>
+<div id='Engañame nomás'  style='display:none;'>
+Engáñame nomás, pero no te alejés<br>
+Jurá que solo a mí me quieres de verdad!<br>
+No mates mi ilusión, si un poco me querés<br>
+Pues quiero yo ignorar la triste realidad.<br>
+<br>
+Vos fuiste cual la luz que el alma me alumbró<br>
+El día que mi amor lograste despertar<br>
+&iexcl;Engáñame nomás!, pero no olvides, no!<br>
+Que de mi pecho nunca te he de arrancar.
+</div>
 
+<div id='La vida me engañó' style='display:none;'>
+	La vida me engañó
+</div>
 
 	<td valign=top> A memória do ritmo - 
 			<br>
